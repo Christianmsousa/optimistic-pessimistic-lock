@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>concurrency</groupId>
 	<artifactId>lock</artifactId>
@@ -30,9 +30,9 @@
 		<java.version>21</java.version>
 		<springdoc-openapi-ui.version>2.5.0</springdoc-openapi-ui.version>
 		<retryable.version>2.0.3</retryable.version>
-		<flyway.url>jdbc:postgresql://localhost:5432/caju-desafio</flyway.url>
-		<flyway.user>caju</flyway.user>
-		<flyway.password>caju</flyway.password>
+		<flyway.url>jdbc:postgresql://localhost:5432/lock</flyway.url>
+		<flyway.user>lock</flyway.user>
+		<flyway.password>lock</flyway.password>
 		<flyway.schemas>public</flyway.schemas>
 	</properties>
 	<dependencies>
@@ -44,7 +44,6 @@
 		</dependency>
 
 		<!--	Retryable	-->
-
 		<dependency>
 			<groupId>org.springframework.retry</groupId>
 			<artifactId>spring-retry</artifactId>
@@ -110,7 +109,6 @@
 		</dependency>
 
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -128,7 +126,7 @@
 			<plugin>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
-				<version>10.10.0</version> <!-- Use a versão adequada -->
+				<version>10.10.0</version>
 				<configuration>
 					<url>${flyway.url}</url>
 					<user>${flyway.user}</user>
